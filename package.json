@@ -27,7 +27,7 @@
 		"lint:knip": "knip",
 		"prepare": "husky",
 		"register": "npx tsx ./src/commands.ts",
-		"start": "node ./src/index.ts",
+		"start": "npx tsx ./src/index.ts",
 		"test": "vitest",
 		"tsc": "tsc"
 	},
