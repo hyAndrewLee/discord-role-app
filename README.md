@@ -15,18 +15,6 @@
 	<img alt="💪 TypeScript: Strict" src="https://img.shields.io/badge/%F0%9F%92%AA_typescript-strict-21bb42.svg" />
 </p>
 
-## Usage
-
-```shell
-npm i discord-role-app
-```
-
-```ts
-import { greet } from "discord-role-app";
-
-greet("Hello, world! 💖");
-```
-
 ## Contributors
 
 <!-- spellchecker: disable -->

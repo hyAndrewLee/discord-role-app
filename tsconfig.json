@@ -11,7 +11,15 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"target": "ES2022"
+		"target": "ES2022",
+		"allowImportingTsExtensions": true
 	},
-	"include": ["src"]
+	"include": ["./src/*.ts"],
+	"ts-node": {
+		"esm": true,
+		"files": true,
+		"transpileOnly": true,
+		"experimentalResolver": true,
+		"experimentalSpecifierResolution": "node"
+	}
 }

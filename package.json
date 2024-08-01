@@ -8,6 +8,7 @@
 	},
 	"license": "MIT",
 	"author": {
+		"name": "hyAndrewLee",
 		"email": "lolfill0104@gmail.com"
 	},
 	"type": "module",
@@ -20,15 +21,23 @@
 	],
 	"scripts": {
 		"build": "tsup",
+		"dev": "nodemon --exec node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/index.ts",
 		"format": "prettier .",
 		"lint": "eslint . --max-warnings 0",
 		"lint:knip": "knip",
 		"prepare": "husky",
+		"register": "npx tsx ./src/commands.ts",
+		"start": "node ./src/index.ts",
 		"test": "vitest",
 		"tsc": "tsc"
 	},
 	"lint-staged": {
 		"*": "prettier --ignore-unknown --write"
+	},
+	"dependencies": {
+		"discord-interactions": "^4.0.0",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2"
 	},
 	"devDependencies": {
 		"@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
@@ -36,6 +45,8 @@
 		"@release-it/conventional-changelog": "^8.0.1",
 		"@types/eslint-plugin-markdown": "^2.0.2",
 		"@types/eslint__js": "^8.42.3",
+		"@types/express": "^4.17.21",
+		"@types/node": "^22.0.2",
 		"@vitest/coverage-v8": "^2.0.5",
 		"console-fail-test": "^0.4.4",
 		"eslint": "^9.8.0",
@@ -46,11 +57,13 @@
 		"husky": "^9.1.4",
 		"knip": "^5.27.0",
 		"lint-staged": "^15.2.7",
+		"nodemon": "^3.1.4",
 		"prettier": "^3.3.3",
 		"prettier-plugin-curly": "^0.2.2",
 		"prettier-plugin-packagejson": "^2.5.1",
 		"prettier-plugin-sh": "^0.14.0",
 		"release-it": "^17.6.0",
+		"ts-node": "^10.9.2",
 		"tsup": "^8.2.3",
 		"typescript": "^5.5.4",
 		"typescript-eslint": "^8.0.0",
